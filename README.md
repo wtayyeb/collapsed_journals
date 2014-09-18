@@ -1,21 +1,29 @@
-Redmine Collapsed Journals Plugin
-=================================
+# Redmine Collapsed Journals Plugin
 
-Collapses issue history items without an assosiated note.
+collapses issue history items without an assosiated note.
 
-Translated into 4 languages: English, German, Russian, Ukrainian.
+translated into 4 languages: english, german, russian, ukrainian.
 
-This plugin is the fork of [Hide Journal Details](http://www.redmine.org/plugins/hide_journal_details) plugin by [Jürgen Diez](http://www.redmine.org/users/76374).
+## screenshots
 
-Screenshot
-----------
-![Redmine Collapsed Journals Plugin Screenshot](https://github.com/stgeneral/redmine-collapsed-journals/releases/download/v0.0.2/collapsed-journals-screenshot.png)
+default theme:
 
-Installation notes
-------------------
+![default theme](screenshots/collapsed_journal_default.png)
 
-Plugin's directory should be named `collapsed_journals` exactly.
+Basecamp theme:
 
-Other installation instructions are generic and can be found at [Redmine Plugins page](http://www.redmine.org/projects/redmine/wiki/Plugins).
+![basecamp theme](screenshots/collapsed_journal_basecamp.png)
 
-Compatible with Redmine 2.4, 2.3, 2.2.
+Circle theme:
+
+![circle theme](screenshots/collapsed_journal_circle.png)
+
+Note: the Circle theme seen above is my modified version, the default does not have any custom styling for this button, however all three screenshots above use the same plugin stylesheet.
+
+## installation notes
+
+must be installed in the `/plugins/collapsed_journals` directory.
+
+other installation instructions are generic and can be found at [Redmine Plugins page](http://www.redmine.org/projects/redmine/wiki/Plugins).
+
+compatible with Redmine 2.2+, tested up to 2.5.2
