@@ -1,6 +1,10 @@
 #toggle-journal-details-div {
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 10px;
+}
+
+#toggle-journal-details-div a {
+  font-size: 0.75em;
 }
 
 #hide-journal-details {
