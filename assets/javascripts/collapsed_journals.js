@@ -1,13 +1,11 @@
-function showJournalDetails()
-{
+function showJournalDetails() {
   $(".toggle-journal-details").toggle();
 
   $(".journal").show();
   $(".journal .details").show();
 }
 
-function hideJournalDetails()
-{
+function hideJournalDetails() {
   $(".toggle-journal-details").toggle();
 
   $(".journal").hide();
@@ -15,8 +13,7 @@ function hideJournalDetails()
   $(".journal .details").hide();
 }
 
-function checkHash(location)
-{
+function checkHash(location) {
   var note_id = location.hash.substr(1);
   if (note_id == "") {
     return false;
@@ -33,14 +30,12 @@ function checkHash(location)
   }
 }
 
-function checkHashForLink()
-{
+function checkHashForLink() {
   checkHash(this);
 }
 
-function initializeVisibility()
-{
-  $("#history").prepend($("#toggle-journal-details-div"));
+function initializeVisibility() {
+  $("#history h3").first().append($("#toggle-journal-details-div"));
 
   $("a.issue").on("click", checkHashForLink);
 
