@@ -37,6 +37,10 @@ function checkHashForLink() {
 function initializeVisibility() {
   $("#history h3").first().append($("#toggle-journal-details-div"));
 
+  var hiddenCount = $(".journal.has-details").length - $(".journal.has-details.has-notes").length;
+
+  $("#toggle-journal-details-div span.details-count").html("("+hiddenCount+" entries)");
+
   $("a.issue").on("click", checkHashForLink);
 
   $("#show-journal-details").show();

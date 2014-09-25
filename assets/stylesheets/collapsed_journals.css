@@ -7,6 +7,11 @@
   font-size: 0.75em;
 }
 
+#toggle-journal-details-div .details-count {
+  font-size: 0.8em;
+  margin: 0 4px;
+}
+
 #hide-journal-details {
   display: none;
 }
