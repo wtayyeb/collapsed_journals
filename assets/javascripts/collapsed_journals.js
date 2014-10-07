@@ -3,6 +3,7 @@ function showJournalDetails() {
 
   $(".journal").show();
   $(".journal .details").show();
+  $(window).scrollTop($('#history').offset().top)
 }
 
 function hideJournalDetails() {
@@ -39,7 +40,7 @@ function initializeVisibility() {
 
   var hiddenCount = $(".journal.has-details").length - $(".journal.has-details.has-notes").length;
 
-  $("#toggle-journal-details-div span.details-count").html("("+hiddenCount+" entries)");
+  $("#toggle-journal-details-div a.toggle-journal-details").attr("title",hiddenCount+" entries");
 
   $("a.issue").on("click", checkHashForLink);
 
