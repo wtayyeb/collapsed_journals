@@ -3,7 +3,10 @@ function showJournalDetails() {
 
   $(".journal").show();
   $(".journal .details").show();
-  $(window).scrollTop($('#history').offset().top)
+
+  $('html, body').animate({
+    scrollTop: $('#history').offset().top
+  }, 300);
 }
 
 function hideJournalDetails() {
