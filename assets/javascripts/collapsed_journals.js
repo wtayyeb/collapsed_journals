@@ -4,9 +4,11 @@ function showJournalDetails() {
   $(".journal").show();
   $(".journal .details").show();
 
+  var spacer = $('#top-menu').height() + $('#main-menu').height();
+
   $('html, body').animate({
-    scrollTop: $('#history').offset().top
-  }, 300);
+    scrollTop: $('#history').offset().top - spacer
+  }, 200);
 }
 
 function hideJournalDetails() {
