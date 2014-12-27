@@ -52,3 +52,5 @@ function initializeVisibility() {
     window.location.href = window.location.href;
   }
 }
+
+$(document).ready(initializeVisibility);
