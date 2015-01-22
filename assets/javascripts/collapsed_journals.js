@@ -15,13 +15,20 @@ function hideJournalDetails() {
   $(".journal.has-details, .journal .details").not(".has-notes").hide();
 }
 
-function addClass(el, cl) {
-  if (cl) {
-    var newClassString = el.className + " " + cl;
+function setClass(el, cl, remove) {
+  if (cl && cl) {
+    var newClassString;
+    var curClassString = el.className;
+    if (remove) {
+      var regStr = new RegExp('/(?:^|\s)'+cl+'(?!\S)/g', '');
+      newClassString = curClassString.replace(regStr);
+    } else {
+      newClassString = curClassString + " " + cl;
+    }
     el.className = newClassString.trim();
   }
-  console.info('target element :', el);
-  console.info('class name :', cl);
+  // console.info('target element :', el);
+  // console.info('class name :', cl);
 }
 
 function checkHash(location) {
@@ -33,7 +40,7 @@ function checkHash(location) {
   var note_node = document.getElementById(note_id);
 
   if (note_node) {
-    addClass(note_node.parentNode, "initial");
+    setClass(note_node.parentNode, "initial");
     $(note_node.parentNode).show();
     $(note_node.childNodes).show();
     return true;
