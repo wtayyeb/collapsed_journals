@@ -15,3 +15,8 @@
 #hide-journal-details {
   display: none;
 }
+
+#history .journal.initial {
+  background-color: #C1EDF7;
+  padding: 6px;
+}

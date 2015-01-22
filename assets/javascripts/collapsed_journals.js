@@ -15,6 +15,15 @@ function hideJournalDetails() {
   $(".journal.has-details, .journal .details").not(".has-notes").hide();
 }
 
+function addClass(el, cl) {
+  if (cl) {
+    var newClassString = el.className + " " + cl;
+    el.className = newClassString.trim();
+  }
+  console.info('target element :', el);
+  console.info('class name :', cl);
+}
+
 function checkHash(location) {
   var note_id = location.hash.substr(1);
   if (note_id == "") {
@@ -24,6 +33,7 @@ function checkHash(location) {
   var note_node = document.getElementById(note_id);
 
   if (note_node) {
+    addClass(note_node.parentNode, "initial");
     $(note_node.parentNode).show();
     $(note_node.childNodes).show();
     return true;
@@ -41,7 +51,7 @@ function initializeVisibility() {
 
   var hiddenCount = $(".journal.has-details").not(".has-notes").length;
 
-  $("#toggle-journal-details-div a.toggle-journal-details").attr("title",hiddenCount+" journal detail entries");
+  $("#toggle-journal-details-div a.toggle-journal-details").attr("title", hiddenCount + " journal detail entries");
 
   $("a.issue").on("click", checkHashForLink);
 
