@@ -19,7 +19,7 @@ function setClass(el, cl, remove) {
   if (cl && cl) {
     var newClassString;
     var curClassString = el.className;
-    if (remove) {
+    if (remove === true) {
       var regStr = new RegExp('/(?:^|\s)'+cl+'(?!\S)/g', '');
       newClassString = curClassString.replace(regStr);
     } else {
@@ -38,6 +38,11 @@ function checkHash(location) {
   }
 
   var note_node = document.getElementById(note_id);
+
+  // email links target the parent element when compared to the in-page note anchors.
+  if (note_id.substr(0,4) === "chan") {
+    note_node = note_node.firstElementChild;
+  }
 
   if (note_node) {
     setClass(note_node.parentNode, "initial");

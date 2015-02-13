@@ -18,5 +18,6 @@
 
 #history .journal.initial {
   background-color: #C1EDF7;
-  padding: 6px;
+  padding: 10px;
+  margin: -10px;
 }
